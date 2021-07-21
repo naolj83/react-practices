@@ -1,9 +1,9 @@
-## ex01: 전통적인 DOM API 기반의 애플리케이션
+## ex03: 애플리케이션 분리 2 - ES6 모듈 시스템
 1. 프로젝트 생성
 
 ```bash
-$ mkdir ex01
-$ cd ex01
+$ mkdir ex03
+$ cd ex03
 $ npm init -y
 $ npm i -D express
 ```
@@ -18,6 +18,7 @@ $ npm i -D express
     |--- public
     |       |--- index.html
     |       |--- index.js
+    |       |--- App.js
     |--- dev-server
 </pre>
 
@@ -29,7 +30,7 @@ $ npm i -D express
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dev-server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -47,13 +48,16 @@ $ npm i -D express
 
 [index.js]
 ```javascript
+document.getElementById('root').appendChild(App());
+```
+
+[App.js]
+```javascript
 const App = function(){
     const app = document.createElement('h1');
     app.textContent = 'Hello World';
     return app;
 }
-
-document.getElementById('root').appendChild(App());
 ```
 
 5. 테스트(테스트 서버 실행)
@@ -63,7 +67,3 @@ $ npm start
 ```
 
 6. 결론
-
-- DOM API를 직접 자바스크립트 코드로 호출
-- 주로 DOM 조작에 특화된 jQuery와 같은 라이브러리를 활용한다.
-- 장점은 작성된 애플리케이션 코드의 전달이 쉽다.(작성된대로 js 파일을 html에 링크)
