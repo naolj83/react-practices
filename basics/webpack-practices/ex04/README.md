@@ -12,7 +12,7 @@ $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader
 2. 프로젝트 구조
 
 <pre>
-/ex01
+/ex04
     |--- package.json
     |--- package-lock.json
     |--- node-modules

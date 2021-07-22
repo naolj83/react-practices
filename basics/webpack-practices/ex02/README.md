@@ -12,7 +12,7 @@ $ npm i -D webpack webpack-cli express
 2. 프로젝트 구조
 
 <pre>
-/ex01
+/ex02
     |--- package.json
     |--- package-lock.json
     |--- node-modules
