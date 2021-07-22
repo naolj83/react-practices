@@ -72,3 +72,7 @@ $ node dev-server.mjs
 ```
 
 ES6 모듈로 실행(확장자를 .mjs로) 해야 함.
+
+<br><br>
+npm으로 설치했으면 npx로 실행
+아니면 node로 실행
