@@ -1,18 +1,11 @@
-## webpack-practice: ex05
+## webpack-practice: ex07
 
-1. 프로젝트 생성
-
-```bash
-$ mkdir ex05
-$ cd ex05
-$ npm init -y
-$ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader sass-loader node-sass
-```
+1. 간단한 webpack loader 작성하고 설정해보기(src/text-loader.js)
 
 2. 프로젝트 구조
 
 <pre>
-/ex05
+/ex07
     |--- package.json
     |--- package-lock.json
     |--- node-modules
@@ -20,17 +13,14 @@ $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader sass-l
     |       |--- index.html
     |       |--- bundle.js
     |---src
-    |       |--- assets
-    |       |       |--- scss
-    |       |       |       |--- _variables.scss
-    |       |       |       |--- App.scss
+    |       |--- text-loader.js
     |       |--- index.js
     |       |--- App.js
     |--- webpack.config.js  [webpack 설정 파일]
 </pre>
 
 
-1. webpack.config.js
+3. webpack.config.js
 
 ```jason
 const path = require('path');
@@ -43,15 +33,8 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/i,
-            use:['style-loader', 'css-loader']
-        }, {
-            test: /\.s[ac]ss/i,
-            use: [
-                'style-loader',
-                'css-loader',
-                'sass-loader'
-            ]
+            test: /\.txt$/i,
+            loader: path.resolve('src/text-loader.js')
         }]
     },
     devServer: {
