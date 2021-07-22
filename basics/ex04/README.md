@@ -32,7 +32,7 @@ $ npx webpack --version
 2. 프로젝트 디렉토리
 
 <pre>
-/ex01
+/ex04
     |--- package.json
     |--- package-lock.json
     |--- node-modules

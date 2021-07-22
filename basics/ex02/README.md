@@ -11,7 +11,7 @@ $ npm i -D express
 2. 프로젝트 디렉토리
 
 <pre>
-/ex01
+/ex02
     |--- package.json
     |--- package-lock.json
     |--- node-modules

@@ -13,7 +13,7 @@ $ npm i react react-dom
 2. 프로젝트 디렉토리
 
 <pre>
-/ex01
+/ex05
     |--- package.json
     |--- package-lock.json
     |--- node-modules
