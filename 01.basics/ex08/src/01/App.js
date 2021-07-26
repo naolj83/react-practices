@@ -42,5 +42,9 @@ export default function(){
 // </div>
 // 이렇게 바뀜 =>
 // React.createElement("div", null, React.createElement("h2", null, "App01"), React.createElement("p", null, "JSX Tutorials - ..."));
-// createElement("태그", 프로퍼티(속성), 자식)
+
+// React.createElement(컴포넌트, 프로퍼티(속성), 자식(가변))
+// 컴포넌트 자리에 String, Object 올 수 있음
+// String: "h1", "div" .... -> element가 옴
+// Object: 함수, 클래스 -> 컴포넌트 이름
 // https://babeljs.io/repl 에서 react 코드로 변환시켜줌 참고~
