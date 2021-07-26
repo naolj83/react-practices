@@ -1,8 +1,11 @@
 const path = require('path');
 
-module.exports = {
+module.exports = (env) => {
+    const entry = path.resolve(`src/${env.src}/index.js`);
+
+    return {
     mode: "none",
-    entry: path.resolve('src/index.js'),
+    entry: entry,
     output: {
         path: path.resolve('public'),
         filename: 'bundle.js'
@@ -42,4 +45,5 @@ module.exports = {
         compress: true,
         historyApiFallback: true
     }
+};
 }
