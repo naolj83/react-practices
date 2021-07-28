@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import KanbanBoard from './KanbanBoard';
 
-export default class App extends Component {
-    render() {
+export default function App() {
         return (
-            <div id='App'>
-                <h1>Kanban Board</h1>
-            </div>
+            <KanbanBoard />
         );
-    }
 }
 
