@@ -1,4 +1,4 @@
-## React Practices - Component
+## kanban board
 
 ### ex01: Property: Component 작성 (Data Flow: Top -> Down) - Kanban Board #1
 ### ex02: Component Styling - Kanban Board #2
