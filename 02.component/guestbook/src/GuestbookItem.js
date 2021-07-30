@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styles from './assets/css/GuestbookItem.css';
+import styles from './assets/scss/GuestbookItem.scss';
 
 export default function GuestbookList({name, message, regDate}) {
         return (
