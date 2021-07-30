@@ -17,27 +17,27 @@ export default function App() {
     };
 
     const onMouseOverImage = function(e) {
-        console.log('mouseover');
+        console.log('mouseover', ":", `x=${e.clientX}, y=${e.clientY}`);
     };
 
     const onMouseMoveImage = function(e) {
-        console.log('mousemove');
+        console.log('mousemove', ":", `x=${e.clientX}, y=${e.clientY}`);
     };
 
     const onMouseOutImage = function(e) {
-        console.log('mouseout');
+        console.log('mouseout'), ":", `x=${e.clientX}, y=${e.clientY}`;
     };
 
     const onMouseDownImage = function(e) {
-        console.log('mousedown');
+        console.log('mousedown', ":", `x=${e.clientX}, y=${e.clientY}`);
     };
 
     const onMouseUpImage = function(e) {
-        console.log('mouseup');
+        console.log('mouseup', ":", `x=${e.clientX}, y=${e.clientY}`);
     };
 
     const onClickImage = function(e) {
-        console.log('clicked');
+        console.log('clicked', ":", `x=${e.clientX}, y=${e.clientY}`);
     };
 
     const onDoubleClickImage = function(e) {
