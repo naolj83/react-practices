@@ -14,6 +14,7 @@ $ npm run debug src={no} css-modules=false
 ### 06. Styled Component*
 ### 07. src/07: SASS & SCSS*
 ### 08. LESS & Stylable*
+### 09. Awesome Font
 
 <br/><br/>
 
