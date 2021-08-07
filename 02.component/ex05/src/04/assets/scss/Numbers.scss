@@ -1,0 +1,12 @@
+:global(.clock-display) {
+    :global(.Clock) {
+        :global(.numbers) {
+            :global(.placeholder) {
+            color: #2b2828;
+            position: absolute;
+            top: 0;
+            z-index: 50;
+            }
+        }
+    }
+}
