@@ -3,19 +3,15 @@ const authorized = require('./authorized');
 
 const applicationRouter = {
     setup: async function(application) {
-        
- 
         application
         .all('*', function (req, res, next) {
             res.locals.req = req;
             res.locals.res = res;
             next();
         })
-
-        .use('/api', require('./emaillist'))        
+        .use('/api', require('./emaillist'))
         .use(errorRouter.error404)
         .use(errorRouter.error500)
-        
     }
 };
 
