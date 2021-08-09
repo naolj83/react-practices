@@ -38,7 +38,8 @@
 2. nodemon
 3. webpack dev server
 4. package.json
-5. node application
+5. concurrently
+6. node application
 
 <br/>
 
@@ -52,3 +53,6 @@
 3. app03.guestbook
 4. app04.gallery
 5. app05.mysite
+
+react에서 async 사용하려면 필요
+$ npm i -D @babel/plugin-transform-runtime

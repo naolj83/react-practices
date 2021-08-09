@@ -8,7 +8,7 @@ module.exports = {
         const query = util.promisify(conn.query).bind(conn);
         try {
             return await query(
-                "select first_name as firstName, last_name as lastName, email from emaillist order by no desc",
+                "select no, first_name as firstName, last_name as lastName, email from emaillist order by no desc",
                 []
             );
         } catch(e) {
