@@ -1,3 +1,4 @@
+const { response } = require('express');
 const model = require('../models/kanban');
 
 module.exports = {
@@ -15,6 +16,23 @@ module.exports = {
           next(err);
         }       
     },
-    createTask: function(req, res, next) {
+    createTask: async function(req, res, next) {
+        try {
+            const cardNo = req.params['cardNo'];
+            const task = req.body;
+
+            // await model.insertTask(...) 성공했다 치고~(db)
+
+            task.no = Date.now();
+            res
+                .status(200)
+                .send({
+                    result: 'success',
+                    data: task,
+                    message: null
+                });
+        } catch(err) {
+            next(err);
+        }
     }  
 }

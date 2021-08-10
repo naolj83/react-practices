@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import TaskList from './TaskList';
 import styles from './assets/scss/Card.scss';
-import PropTypes from 'prop-types';
 
-export default function Card({ title, description, status, tasks }) {
-  const [ showDetails, setShowDetails ] = useState(true);
+export default function Card({ cardNo, title, description, status, tasks, notifyTask }) {
+    const [showDetails, setShowDetails] = useState(true);
 
     const styleSideColor = {
       position: 'absolute',
@@ -21,27 +21,30 @@ export default function Card({ title, description, status, tasks }) {
           <div 
             className={ 
               showDetails ? 
-              [styles.Card__Title, styles.Card__Title__open].join(' ') :
-              styles.Card__Title
+                [styles.Card__Title, styles.Card__Title__open].join(' ') :
+                styles.Card__Title
             }
-              onClick={ () => { setShowDetails(!showDetails) }}>
-              { title }
+            onClick={ () => setShowDetails(!showDetails) }>
+            { title }
           </div>
           {
             showDetails ?
               <div className={ styles.Card__Details }>
                 { description }
-                <TaskList tasks={ tasks }/>
+                <TaskList
+                  cardNo={ cardNo }
+                  tasks={ tasks }
+                  notifyTask={ notifyTask } />
               </div> :
               null
           }
-        </div>
+        </div>    
     );
 }
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired, 
   tasks: PropTypes.arrayOf(PropTypes.object).isRequired
 }
