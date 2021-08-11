@@ -34,5 +34,23 @@ module.exports = {
         } catch(err) {
             next(err);
         }
+    },
+    deleteTask: async function(req, res, next) {
+        try {
+            const cardNo = req.params['cardNo'];
+            const task = req.body;
+
+            task.no = Date.now();
+            res
+                .status(200)
+                .send({
+                    result: 'success',
+                    data: task,
+                    message: null
+                });
+
+        } catch(err) {
+            next(err);
+        }
     }  
 }
