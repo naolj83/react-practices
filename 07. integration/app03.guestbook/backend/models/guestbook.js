@@ -8,7 +8,7 @@ module.exports = {
         const query = util.promisify(conn.query).bind(conn);
         try {
             return await query(
-                "select no, name, message, reg_date from guestbook order by no desc",
+                "select no, name, message from guestbook order by no desc",
                 []
             );
         } catch(e) {
@@ -22,7 +22,7 @@ module.exports = {
         const query = util.promisify(conn.query).bind(conn);
         try {
             return await query(
-                "insert into guestbook values(null, ?, ?, ?)",
+                "insert into guestbook values(null, ?, ?, ?, now())",
                 Object.values(guestbook)
             );
         } catch(e) {
